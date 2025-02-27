@@ -9,36 +9,51 @@ import Write from "./routes/Write.jsx";
 import RegisterPage from "./routes/RegisterPage.jsx";
 import LogInPage from "./routes/LogInPage.jsx";
 import SinglePostPage from "./routes/SinglePostPage.jsx";
+import MainLayout from "./layouts/MainLayout.jsx";
+import { ClerkProvider } from "@clerk/clerk-react";
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key");
+}
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Homepage></Homepage>,
-  },
-  {
-    path: "/posts",
-    element: <PostListPage></PostListPage>,
-  },
-  {
-    path: "/:slug",
-    element: <SinglePostPage></SinglePostPage>,
-  },
-  {
-    path: "/write",
-    element: <Write></Write>,
-  },
-  {
-    path: "/register",
-    element: <RegisterPage></RegisterPage>,
-  },
-  {
-    path: "/login",
-    element: <LogInPage></LogInPage>,
+    element: <MainLayout></MainLayout>,
+    children: [
+      {
+        path: "/",
+        element: <Homepage></Homepage>,
+      },
+      {
+        path: "/posts",
+        element: <PostListPage></PostListPage>,
+      },
+      {
+        path: "/:slug",
+        element: <SinglePostPage></SinglePostPage>,
+      },
+      {
+        path: "/write",
+        element: <Write></Write>,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage></RegisterPage>,
+      },
+      {
+        path: "/login",
+        element: <LogInPage></LogInPage>,
+      },
+    ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+      <RouterProvider router={router}></RouterProvider>
+    </ClerkProvider>
   </StrictMode>
 );

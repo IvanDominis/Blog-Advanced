@@ -1,17 +1,36 @@
 import React, { useState } from "react";
 import Image from "./Image";
+import { Link } from "react-router-dom";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="flex items-center justify-between w-full h-16 md:h-20">
       {/* LOGO */}
-      <div className="flex items-center gap-4 text-2xl font-bold">
+      <Link to="/" className="flex items-center gap-4 text-2xl font-bold">
         <Image src="logo.png" alt="logo" w={32} h={32}></Image>
         <span>Free2Write</span>
-      </div>
+      </Link>
       {/* Destop menu */}
-      <NavList className="hidden md:flex xl:gap-12"></NavList>
+      <NavList className="hidden md:flex xl:gap-12">
+        {" "}
+        <SignedOut>
+          <Link to="/login">
+            <button className="px-4 py-2 text-white bg-blue-800 rounded-3xl">
+              Login
+            </button>
+          </Link>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </NavList>
       {/* Mobile menu */}
       <div className="md:hidden">
         <div
@@ -31,16 +50,14 @@ const NavBar = () => {
   );
 };
 
-function NavList({ className = "" }) {
+function NavList({ className = "", children }) {
   return (
     <div className={`items-center font-medium ${className}`}>
-      <a href="/">Home</a>
-      <a href="/">Trending</a>
-      <a href="/">Most popular</a>
-      <a href="/">About</a>
-      <button className="px-4 py-2 text-white bg-blue-800 rounded-3xl">
-        Login
-      </button>
+      <Link to="/">Home</Link>
+      <Link to="/">Trending</Link>
+      <Link to="/">Most popular</Link>
+      <Link to="/">About</Link>
+      {children}
     </div>
   );
 }
