@@ -36,12 +36,12 @@ const MainCategories = () => {
         >
           Search Engines
         </Link>
-        <Link
+        {/* <Link
           to="/postscat=marketing"
           className="px-4 py-2 rounded-full hover:bg-blue-50"
         >
           Marketing
-        </Link>
+        </Link> */}
       </div>
       <span className="text-xl font-medium">|</span>
       {/* SEARCH */}
@@ -57,7 +57,11 @@ const MainCategories = () => {
           <circle cx="10.5" cy="10.5" r="7.5" />
           <line x1="16.5" y1="16.5" x2="22" y2="22" />{" "}
         </svg>
-        <input type="text" placeholder="Search a post..."></input>
+        <input
+          type="text"
+          className="bg-transparent"
+          placeholder="Search a post..."
+        ></input>
       </div>
     </div>
   );
