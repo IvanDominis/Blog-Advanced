@@ -25,11 +25,13 @@ const FeaturedPost = () => {
       </div>
       <div className="flex flex-col w-full gap-4 lg:w-1/2">
         <div className="flex justify-between gap-4 lg:h-1/3">
-          <Image
-            src="featured2.jpeg"
-            className="object-cover w-1/3 rounded-3xl aspect-video"
-            w="298"
-          ></Image>
+          <div className="w-1/3 aspect-video">
+            <Image
+              src="featured2.jpeg"
+              className="object-cover w-full h-full rounded-3xl"
+              w="298"
+            ></Image>
+          </div>
           <div className="w-2/3">
             <div className="flex items-center gap-4 mb-4 text-sm lg:text-base">
               <h1 className="font-semibold">0.2</h1>
@@ -45,11 +47,13 @@ const FeaturedPost = () => {
           </div>
         </div>
         <div className="flex justify-between gap-4 lg:h-1/3">
-          <Image
-            src="featured2.jpeg"
-            className="object-cover w-1/3 rounded-3xl aspect-video"
-            w="298"
-          ></Image>
+          <div className="w-1/3 aspect-video">
+            <Image
+              src="featured2.jpeg"
+              className="object-cover w-full h-full rounded-3xl "
+              w="298"
+            ></Image>
+          </div>
           <div className="w-2/3">
             <div className="flex items-center gap-4 mb-4 text-sm lg:text-base">
               <h1 className="font-semibold">0.2</h1>
@@ -65,11 +69,13 @@ const FeaturedPost = () => {
           </div>
         </div>
         <div className="flex justify-between gap-4 lg:h-1/3">
-          <Image
-            src="featured2.jpeg"
-            className="object-cover w-1/3 rounded-3xl aspect-video"
-            w="298"
-          ></Image>
+          <div className="w-1/3 aspect-video">
+            <Image
+              src="featured2.jpeg"
+              className="object-cover w-full h-full rounded-3xl"
+              w="298"
+            ></Image>
+          </div>
           <div className="w-2/3">
             <div className="flex items-center gap-4 mb-4 text-sm lg:text-base">
               <h1 className="font-semibold">0.2</h1>

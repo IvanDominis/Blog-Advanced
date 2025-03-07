@@ -8,6 +8,7 @@ const PostListItem = () => {
         <Image
           src="postImg.jpeg"
           className="object-contain rounded-2xl"
+          w="735"
         ></Image>
       </div>
       <div className="flex flex-col gap-4 xl:w-2/3">
