@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const MainCategories = () => {
@@ -19,19 +18,19 @@ const MainCategories = () => {
           Web Design
         </Link>
         <Link
-          to="/postscat=development"
+          to="/posts?cat=development"
           className="px-4 py-2 rounded-full hover:bg-blue-50"
         >
           Development
         </Link>
         <Link
-          to="/postscat=databases"
+          to="/posts?cat=databases"
           className="px-4 py-2 rounded-full hover:bg-blue-50"
         >
           Databases
         </Link>
         <Link
-          to="/postscat=seo"
+          to="/posts?cat=seo"
           className="px-4 py-2 rounded-full hover:bg-blue-50"
         >
           Search Engines

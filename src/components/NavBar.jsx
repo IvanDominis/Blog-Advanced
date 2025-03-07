@@ -1,12 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "./Image";
 import { Link } from "react-router-dom";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -34,7 +29,7 @@ const NavBar = () => {
       {/* Mobile menu */}
       <div className="md:hidden">
         <div
-          className="text-2xl cursor-pointer"
+          className="text-4xl cursor-pointer"
           onClick={() => setOpen((prev) => !prev)}
         >
           {open ? "X" : "☰"}
