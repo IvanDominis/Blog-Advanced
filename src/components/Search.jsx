@@ -1,4 +1,4 @@
-const Seach = () => {
+const Search = () => {
   return (
     <div className="flex items-center gap-2 p-2 bg-gray-100 rounded-full">
       <svg
@@ -21,4 +21,4 @@ const Seach = () => {
   );
 };
 
-export default Seach;
+export default Search;

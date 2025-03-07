@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Image from "../components/Image";
 import PostMenuActions from "../components/PostMenuActions";
-import Seach from "../components/Seach";
+import Search from "../components/Search";
 import Comments from "../components/Comments";
 
 const SinglePostPage = () => {
@@ -142,7 +142,7 @@ const SinglePostPage = () => {
             </Link>
           </div>
           <h1 className="mt-8 mb-4 text-sm font-medium">Search</h1>
-          <Seach></Seach>
+          <Search></Search>
         </div>
       </div>
       <Comments></Comments>
