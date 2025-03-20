@@ -25,8 +25,7 @@ const PostListItem = () => {
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
           aliquid, non architecto sapiente in iste facilis? Laudantium qui odit
-          necessitatibus! Cum voluptas, assumenda aperiam dolorum error nulla
-          consequatur numquam odio!
+          necessitatibus!
         </p>
         <Link to="/test" className="text-sm text-blue-800 underline">
           Read more

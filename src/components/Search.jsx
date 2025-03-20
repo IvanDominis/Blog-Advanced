@@ -14,7 +14,7 @@ const Search = () => {
       </svg>
       <input
         type="text"
-        className="bg-transparent"
+        className="bg-transparent border-none focus:outline-none"
         placeholder="search a post ..."
       ></input>
     </div>
